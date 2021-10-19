@@ -4,14 +4,9 @@ import sys
 cwd = os.getcwd()
 sys.path.append(cwd)
 
-from function.f3 import fn_sum
+from src.f5 import fn_error_code
 import pytest
 
-@pytest.mark.parametrize('v1,v2,res', [
-    (1, 2,3),
-    (2, 3,5),
-    (3, 4,1),
-    (4, 5,9)
-])
-def test_sum(v1,v2,res):
-    assert fn_sum(v1,v2) == res
+def test_code():
+    with pytest.raises(ValueError, match=r".*Code\[1234\]:.*"):
+        fn_error_code(-3)

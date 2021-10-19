@@ -4,7 +4,10 @@ import sys
 cwd = os.getcwd()
 sys.path.append(cwd)
 
-from function.f3 import fn_sum, fn_mul, fn_div, fn_sub
+from src.f3 import fn_sum, fn_mul, fn_div, fn_sub
+
+'''Group multiple tests in a class
+'''
 
 class Test_F3_1:
     def test_answer1(self):

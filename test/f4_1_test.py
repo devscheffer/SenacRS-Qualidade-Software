@@ -4,7 +4,7 @@ import sys
 cwd = os.getcwd()
 sys.path.append(cwd)
 
-from function.f4 import cls_inventory
+from src.f4 import cls_inventory
 
 import pytest
 
