@@ -1,0 +1,31 @@
+<html><body><h1>src\f3.py</h1>Killed 5 out of 8 mutants<h2>Suspicious</h2>Mutants that made the test suite take longer, but otherwise seemed ok<h3>Mutant 5</h3><pre>--- src\f3.py
++++ src\f3.py
+@@ -1,5 +1,5 @@
+ def fn_sum(v1:float,v2:float)->float:
+-    res=v1+v2
++    res=v1-v2
+     return res
+ 
+ def fn_sub(v1:float,v2:float)->float:
+</pre><h3>Mutant 8</h3><pre>--- src\f3.py
++++ src\f3.py
+@@ -3,7 +3,7 @@
+     return res
+ 
+ def fn_sub(v1:float,v2:float)->float:
+-    res=v1-v2
++    res= None
+     return res
+ 
+ def fn_mul(v1:float,v2:float)->float:
+</pre><h3>Mutant 11</h3><pre>--- src\f3.py
++++ src\f3.py
+@@ -11,6 +11,6 @@
+     return res
+ 
+ def fn_div(v1:float,v2:float)->float:
+-    res=v1/v2
++    res=v1*v2
+     return res
+ 
+</pre></body></html>

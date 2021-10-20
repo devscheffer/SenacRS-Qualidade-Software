@@ -1,0 +1,84 @@
+<html><body><h1>src\f4.py</h1>Killed 8 out of 16 mutants<h2>Suspicious</h2>Mutants that made the test suite take longer, but otherwise seemed ok<h3>Mutant 14</h3><pre>--- src\f4.py
++++ src\f4.py
+@@ -3,7 +3,7 @@
+ 
+ class cls_inventory:
+     def __init__(self,limit=100):
+-        self.__limit = limit
++        self.__limit = None
+         self.__total_items = 0
+ 
+     @property
+</pre><h3>Mutant 15</h3><pre>--- src\f4.py
++++ src\f4.py
+@@ -4,7 +4,7 @@
+ class cls_inventory:
+     def __init__(self,limit=100):
+         self.__limit = limit
+-        self.__total_items = 0
++        self.__total_items = 1
+ 
+     @property
+     def limit(self):
+</pre><h3>Mutant 16</h3><pre>--- src\f4.py
++++ src\f4.py
+@@ -4,7 +4,7 @@
+ class cls_inventory:
+     def __init__(self,limit=100):
+         self.__limit = limit
+-        self.__total_items = 0
++        self.__total_items = None
+ 
+     @property
+     def limit(self):
+</pre><h3>Mutant 17</h3><pre>--- src\f4.py
++++ src\f4.py
+@@ -6,7 +6,6 @@
+         self.__limit = limit
+         self.__total_items = 0
+ 
+-    @property
+     def limit(self):
+         return self.__limit
+ 
+</pre><h3>Mutant 20</h3><pre>--- src\f4.py
++++ src\f4.py
+@@ -13,7 +13,7 @@
+     @limit.setter
+     def limit(self, value):
+         self.__limit = value
+-    @property
++
+     def total_items(self):
+         return self.__total_items
+ 
+</pre><h3>Mutant 23</h3><pre>--- src\f4.py
++++ src\f4.py
+@@ -22,7 +22,7 @@
+         self.__total_items = value
+ 
+     def add_new_stock(self, name, price, quantity):
+-        if quantity <= 0:
++        if quantity < 0:
+             raise InvalidQuantityException(f'Cannot add a quantity of {quantity}. All new stocks must have at least 1 item')
+         else:
+             self.__total_items += quantity
+</pre><h3>Mutant 27</h3><pre>--- src\f4.py
++++ src\f4.py
+@@ -27,5 +27,5 @@
+         else:
+             self.__total_items += quantity
+     def remove_stock(self, item, quantity):
+-            self.__total_items -= quantity
++            self.__total_items = quantity
+ 
+</pre><h3>Mutant 28</h3><pre>--- src\f4.py
++++ src\f4.py
+@@ -27,5 +27,5 @@
+         else:
+             self.__total_items += quantity
+     def remove_stock(self, item, quantity):
+-            self.__total_items -= quantity
++            self.__total_items += quantity
+ 
+</pre></body></html>
